@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Appointment Manager</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://use.typekit.net/tdp1ddx.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+
+  <body>
+    <%= yield %>
+    <div id="application"></div>
+    <%= javascript_pack_tag 'application' %>
+  </body>
+</html>

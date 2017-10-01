@@ -1,0 +1,654 @@
+// -- Use of Glyphicons Halflings ------------------------------------------- //
+// <span aria-hidden="true" data-icon="&#xe001;" class="glyph-halflings glyph-halflings-glass"></span>
+
+@font-face{
+  font-family: "Glyphicons Halflings";
+  src: asset_url("glyphicons/Glyphicons-Halflings.eot");
+  src: asset_url("glyphicons/Glyphicons-Halflings.eot?#iefix") format("embedded-opentype"),
+  asset_url("glyphicons/Glyphicons-Halflings.woff2") format("woff2"),
+  asset_url("glyphicons/Glyphicons-Halflings.woff") format("woff"),
+  asset_url("glyphicons/Glyphicons-Halflings.ttf") format("truetype"),
+  asset_url("glyphicons/Glyphicons-Halflings.svg#GlyphiconsHalflings") format("svg");
+}
+
+.glyph-halflings{
+  position: relative;
+  top: 1px;
+  display: inline-block;
+  font-family: "Glyphicons Halflings";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.glyph-halflings.x05{ font-size: 6px }
+
+.glyph-halflings.x2{ font-size: 24px }
+
+.glyph-halflings.x3{ font-size: 36px }
+
+.glyph-halflings.x4{ font-size: 48px }
+
+.glyph-halflings.x5{ font-size: 60px }
+
+.glyph-halflings.x6{ font-size: 72px }
+
+.glyph-halflings.x7{ font-size: 84px }
+
+.glyph-halflings.x8{ font-size: 96px }
+
+.glyph-halflings.light:before{ color: #F2F2F2 }
+
+.glyph-halflings.drop:before{ text-shadow: -1px 1px 3px rgba(0, 0, 0, .3) }
+
+.glyph-halflings.flip{ -moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH" }
+
+.glyph-halflings.flipv{ -moz-transform: scaleY(-1); -o-transform: scaleY(-1); -webkit-transform: scaleY(-1); transform: scaleY(-1); filter: FlipV; -ms-filter: "FlipV" }
+
+.glyph-halflings.rotate90{ -webkit-transform: rotate(90deg); -moz-transform: rotate(90deg); -ms-transform: rotate(90deg); transform: rotate(90deg) }
+
+.glyph-halflings.rotate180{ -webkit-transform: rotate(180deg); -moz-transform: rotate(180deg); -ms-transform: rotate(180deg); transform: rotate(180deg) }
+
+.glyph-halflings.rotate270{ -webkit-transform: rotate(270deg); -moz-transform: rotate(270deg); -ms-transform: rotate(270deg); transform: rotate(270deg) }
+
+.glyph-halflings-glass:before{ content: "\E001" }
+
+.glyph-halflings-music:before{ content: "\E002" }
+
+.glyph-halflings-search:before{ content: "\E003" }
+
+.glyph-halflings-envelope:before{ content: "\E004" }
+
+.glyph-halflings-heart:before{ content: "\E005" }
+
+.glyph-halflings-star:before{ content: "\E006" }
+
+.glyph-halflings-star-empty:before{ content: "\E007" }
+
+.glyph-halflings-user:before{ content: "\E008" }
+
+.glyph-halflings-film:before{ content: "\E009" }
+
+.glyph-halflings-th-large:before{ content: "\E010" }
+
+.glyph-halflings-th:before{ content: "\E011" }
+
+.glyph-halflings-th-list:before{ content: "\E012" }
+
+.glyph-halflings-ok:before{ content: "\E013" }
+
+.glyph-halflings-remove:before{ content: "\E014" }
+
+.glyph-halflings-zoom-in:before{ content: "\E015" }
+
+.glyph-halflings-zoom-out:before{ content: "\E016" }
+
+.glyph-halflings-off:before{ content: "\E017" }
+
+.glyph-halflings-signal:before{ content: "\E018" }
+
+.glyph-halflings-cog:before{ content: "\E019" }
+
+.glyph-halflings-trash:before{ content: "\E020" }
+
+.glyph-halflings-home:before{ content: "\E021" }
+
+.glyph-halflings-file:before{ content: "\E022" }
+
+.glyph-halflings-time:before{ content: "\E023" }
+
+.glyph-halflings-road:before{ content: "\E024" }
+
+.glyph-halflings-download-alt:before{ content: "\E025" }
+
+.glyph-halflings-download:before{ content: "\E026" }
+
+.glyph-halflings-upload:before{ content: "\E027" }
+
+.glyph-halflings-inbox:before{ content: "\E028" }
+
+.glyph-halflings-play-circle:before{ content: "\E029" }
+
+.glyph-halflings-repeat:before{ content: "\E030" }
+
+.glyph-halflings-refresh:before{ content: "\E031" }
+
+.glyph-halflings-list-alt:before{ content: "\E032" }
+
+.glyph-halflings-lock:before{ content: "\E033" }
+
+.glyph-halflings-flag:before{ content: "\E034" }
+
+.glyph-halflings-headphones:before{ content: "\E035" }
+
+.glyph-halflings-volume-off:before{ content: "\E036" }
+
+.glyph-halflings-volume-down:before{ content: "\E037" }
+
+.glyph-halflings-volume-up:before{ content: "\E038" }
+
+.glyph-halflings-qrcode:before{ content: "\E039" }
+
+.glyph-halflings-barcode:before{ content: "\E040" }
+
+.glyph-halflings-tag:before{ content: "\E041" }
+
+.glyph-halflings-tags:before{ content: "\E042" }
+
+.glyph-halflings-book:before{ content: "\E043" }
+
+.glyph-halflings-bookmark:before{ content: "\E044" }
+
+.glyph-halflings-print:before{ content: "\E045" }
+
+.glyph-halflings-camera:before{ content: "\E046" }
+
+.glyph-halflings-font:before{ content: "\E047" }
+
+.glyph-halflings-bold:before{ content: "\E048" }
+
+.glyph-halflings-italic:before{ content: "\E049" }
+
+.glyph-halflings-text-height:before{ content: "\E050" }
+
+.glyph-halflings-text-width:before{ content: "\E051" }
+
+.glyph-halflings-align-left:before{ content: "\E052" }
+
+.glyph-halflings-align-center:before{ content: "\E053" }
+
+.glyph-halflings-align-right:before{ content: "\E054" }
+
+.glyph-halflings-align-justify:before{ content: "\E055" }
+
+.glyph-halflings-list:before{ content: "\E056" }
+
+.glyph-halflings-indent-left:before{ content: "\E057" }
+
+.glyph-halflings-indent-right:before{ content: "\E058" }
+
+.glyph-halflings-facetime-video:before{ content: "\E059" }
+
+.glyph-halflings-picture:before{ content: "\E060" }
+
+.glyph-halflings-pencil:before{ content: "\E061" }
+
+.glyph-halflings-map-marker:before{ content: "\E062" }
+
+.glyph-halflings-adjust:before{ content: "\E063" }
+
+.glyph-halflings-tint:before{ content: "\E064" }
+
+.glyph-halflings-edit:before{ content: "\E065" }
+
+.glyph-halflings-share:before{ content: "\E066" }
+
+.glyph-halflings-check:before{ content: "\E067" }
+
+.glyph-halflings-move:before{ content: "\E068" }
+
+.glyph-halflings-step-backward:before{ content: "\E069" }
+
+.glyph-halflings-fast-backward:before{ content: "\E070" }
+
+.glyph-halflings-backward:before{ content: "\E071" }
+
+.glyph-halflings-play:before{ content: "\E072" }
+
+.glyph-halflings-pause:before{ content: "\E073" }
+
+.glyph-halflings-stop:before{ content: "\E074" }
+
+.glyph-halflings-forward:before{ content: "\E075" }
+
+.glyph-halflings-fast-forward:before{ content: "\E076" }
+
+.glyph-halflings-step-forward:before{ content: "\E077" }
+
+.glyph-halflings-eject:before{ content: "\E078" }
+
+.glyph-halflings-chevron-left:before{ content: "\E079" }
+
+.glyph-halflings-chevron-right:before{ content: "\E080" }
+
+.glyph-halflings-plus-sign:before{ content: "\E081" }
+
+.glyph-halflings-minus-sign:before{ content: "\E082" }
+
+.glyph-halflings-remove-sign:before{ content: "\E083" }
+
+.glyph-halflings-ok-sign:before{ content: "\E084" }
+
+.glyph-halflings-question-sign:before{ content: "\E085" }
+
+.glyph-halflings-info-sign:before{ content: "\E086" }
+
+.glyph-halflings-screenshot:before{ content: "\E087" }
+
+.glyph-halflings-remove-circle:before{ content: "\E088" }
+
+.glyph-halflings-ok-circle:before{ content: "\E089" }
+
+.glyph-halflings-ban-circle:before{ content: "\E090" }
+
+.glyph-halflings-arrow-left:before{ content: "\E091" }
+
+.glyph-halflings-arrow-right:before{ content: "\E092" }
+
+.glyph-halflings-arrow-up:before{ content: "\E093" }
+
+.glyph-halflings-arrow-down:before{ content: "\E094" }
+
+.glyph-halflings-share-alt:before{ content: "\E095" }
+
+.glyph-halflings-resize-full:before{ content: "\E096" }
+
+.glyph-halflings-resize-small:before{ content: "\E097" }
+
+.glyph-halflings-plus:before{ content: "\E098" }
+
+.glyph-halflings-minus:before{ content: "\E099" }
+
+.glyph-halflings-asterisk:before{ content: "\E100" }
+
+.glyph-halflings-exclamation-sign:before{ content: "\E101" }
+
+.glyph-halflings-gift:before{ content: "\E102" }
+
+.glyph-halflings-leaf:before{ content: "\E103" }
+
+.glyph-halflings-fire:before{ content: "\E104" }
+
+.glyph-halflings-eye-open:before{ content: "\E105" }
+
+.glyph-halflings-eye-close:before{ content: "\E106" }
+
+.glyph-halflings-warning-sign:before{ content: "\E107" }
+
+.glyph-halflings-plane:before{ content: "\E108" }
+
+.glyph-halflings-calendar:before{ content: "\E109" }
+
+.glyph-halflings-random:before{ content: "\E110" }
+
+.glyph-halflings-comments:before{ content: "\E111" }
+
+.glyph-halflings-magnet:before{ content: "\E112" }
+
+.glyph-halflings-chevron-up:before{ content: "\E113" }
+
+.glyph-halflings-chevron-down:before{ content: "\E114" }
+
+.glyph-halflings-retweet:before{ content: "\E115" }
+
+.glyph-halflings-shopping-cart:before{ content: "\E116" }
+
+.glyph-halflings-folder-close:before{ content: "\E117" }
+
+.glyph-halflings-folder-open:before{ content: "\E118" }
+
+.glyph-halflings-resize-vertical:before{ content: "\E119" }
+
+.glyph-halflings-resize-horizontal:before{ content: "\E120" }
+
+.glyph-halflings-hdd:before{ content: "\E121" }
+
+.glyph-halflings-bullhorn:before{ content: "\E122" }
+
+.glyph-halflings-bell:before{ content: "\E123" }
+
+.glyph-halflings-certificate:before{ content: "\E124" }
+
+.glyph-halflings-thumbs-up:before{ content: "\E125" }
+
+.glyph-halflings-thumbs-down:before{ content: "\E126" }
+
+.glyph-halflings-hand-right:before{ content: "\E127" }
+
+.glyph-halflings-hand-left:before{ content: "\E128" }
+
+.glyph-halflings-hand-top:before{ content: "\E129" }
+
+.glyph-halflings-hand-down:before{ content: "\E130" }
+
+.glyph-halflings-circle-arrow-right:before{ content: "\E131" }
+
+.glyph-halflings-circle-arrow-left:before{ content: "\E132" }
+
+.glyph-halflings-circle-arrow-top:before{ content: "\E133" }
+
+.glyph-halflings-circle-arrow-down:before{ content: "\E134" }
+
+.glyph-halflings-globe:before{ content: "\E135" }
+
+.glyph-halflings-wrench:before{ content: "\E136" }
+
+.glyph-halflings-tasks:before{ content: "\E137" }
+
+.glyph-halflings-filter:before{ content: "\E138" }
+
+.glyph-halflings-briefcase:before{ content: "\E139" }
+
+.glyph-halflings-fullscreen:before{ content: "\E140" }
+
+.glyph-halflings-dashboard:before{ content: "\E141" }
+
+.glyph-halflings-paperclip:before{ content: "\E142" }
+
+.glyph-halflings-heart-empty:before{ content: "\E143" }
+
+.glyph-halflings-link:before{ content: "\E144" }
+
+.glyph-halflings-phone:before{ content: "\E145" }
+
+.glyph-halflings-pushpin:before{ content: "\E146" }
+
+.glyph-halflings-euro:before{ content: "\E147" }
+
+.glyph-halflings-usd:before{ content: "\E148" }
+
+.glyph-halflings-gbp:before{ content: "\E149" }
+
+.glyph-halflings-sort:before{ content: "\E150" }
+
+.glyph-halflings-sort-by-alphabet:before{ content: "\E151" }
+
+.glyph-halflings-sort-by-alphabet-alt:before{ content: "\E152" }
+
+.glyph-halflings-sort-by-order:before{ content: "\E153" }
+
+.glyph-halflings-sort-by-order-alt:before{ content: "\E154" }
+
+.glyph-halflings-sort-by-attributes:before{ content: "\E155" }
+
+.glyph-halflings-sort-by-attributes-alt:before{ content: "\E156" }
+
+.glyph-halflings-unchecked:before{ content: "\E157" }
+
+.glyph-halflings-expand:before{ content: "\E158" }
+
+.glyph-halflings-collapse:before{ content: "\E159" }
+
+.glyph-halflings-collapse-top:before{ content: "\E160" }
+
+.glyph-halflings-log-in:before{ content: "\E161" }
+
+.glyph-halflings-flash:before{ content: "\E162" }
+
+.glyph-halflings-log-out:before{ content: "\E163" }
+
+.glyph-halflings-new-window:before{ content: "\E164" }
+
+.glyph-halflings-record:before{ content: "\E165" }
+
+.glyph-halflings-save:before{ content: "\E166" }
+
+.glyph-halflings-open:before{ content: "\E167" }
+
+.glyph-halflings-saved:before{ content: "\E168" }
+
+.glyph-halflings-import:before{ content: "\E169" }
+
+.glyph-halflings-export:before{ content: "\E170" }
+
+.glyph-halflings-send:before{ content: "\E171" }
+
+.glyph-halflings-floppy-disk:before{ content: "\E172" }
+
+.glyph-halflings-floppy-saved:before{ content: "\E173" }
+
+.glyph-halflings-floppy-remove:before{ content: "\E174" }
+
+.glyph-halflings-floppy-save:before{ content: "\E175" }
+
+.glyph-halflings-floppy-open:before{ content: "\E176" }
+
+.glyph-halflings-credit-card:before{ content: "\E177" }
+
+.glyph-halflings-transfer:before{ content: "\E178" }
+
+.glyph-halflings-cutlery:before{ content: "\E179" }
+
+.glyph-halflings-header:before{ content: "\E180" }
+
+.glyph-halflings-compressed:before{ content: "\E181" }
+
+.glyph-halflings-earphone:before{ content: "\E182" }
+
+.glyph-halflings-phone-alt:before{ content: "\E183" }
+
+.glyph-halflings-tower:before{ content: "\E184" }
+
+.glyph-halflings-stats:before{ content: "\E185" }
+
+.glyph-halflings-sd-video:before{ content: "\E186" }
+
+.glyph-halflings-hd-video:before{ content: "\E187" }
+
+.glyph-halflings-subtitles:before{ content: "\E188" }
+
+.glyph-halflings-sound-stereo:before{ content: "\E189" }
+
+.glyph-halflings-sound-dolby:before{ content: "\E190" }
+
+.glyph-halflings-sound-5-1:before{ content: "\E191" }
+
+.glyph-halflings-sound-6-1:before{ content: "\E192" }
+
+.glyph-halflings-sound-7-1:before{ content: "\E193" }
+
+.glyph-halflings-copyright-mark:before{ content: "\E194" }
+
+.glyph-halflings-registration-mark:before{ content: "\E195" }
+
+.glyph-halflings-cloud:before{ content: "\E196" }
+
+.glyph-halflings-cloud-download:before{ content: "\E197" }
+
+.glyph-halflings-cloud-upload:before{ content: "\E198" }
+
+.glyph-halflings-tree-conifer:before{ content: "\E199" }
+
+.glyph-halflings-tree-deciduous:before{ content: "\E200" }
+
+.glyph-halflings-cd:before{ content: "\E201" }
+
+.glyph-halflings-save-file:before{ content: "\E202" }
+
+.glyph-halflings-open-file:before{ content: "\E203" }
+
+.glyph-halflings-level-up:before{ content: "\E204" }
+
+.glyph-halflings-copy:before{ content: "\E205" }
+
+.glyph-halflings-paste:before{ content: "\E206" }
+
+.glyph-halflings-door:before{ content: "\E207" }
+
+.glyph-halflings-key:before{ content: "\E208" }
+
+.glyph-halflings-alert:before{ content: "\E209" }
+
+.glyph-halflings-equalizer:before{ content: "\E210" }
+
+.glyph-halflings-king:before{ content: "\E211" }
+
+.glyph-halflings-queen:before{ content: "\E212" }
+
+.glyph-halflings-pawn:before{ content: "\E213" }
+
+.glyph-halflings-bishop:before{ content: "\E214" }
+
+.glyph-halflings-knight:before{ content: "\E215" }
+
+.glyph-halflings-baby-formula:before{ content: "\E216" }
+
+.glyph-halflings-tent:before{ content: "\E217" }
+
+.glyph-halflings-blackboard:before{ content: "\E218" }
+
+.glyph-halflings-bed:before{ content: "\E219" }
+
+.glyph-halflings-apple:before{ content: "\E220" }
+
+.glyph-halflings-erase:before{ content: "\E221" }
+
+.glyph-halflings-hourglass:before{ content: "\E222" }
+
+.glyph-halflings-lamp:before{ content: "\E223" }
+
+.glyph-halflings-duplicate:before{ content: "\E224" }
+
+.glyph-halflings-piggy-bank:before{ content: "\E225" }
+
+.glyph-halflings-scissors:before{ content: "\E226" }
+
+.glyph-halflings-bitcoin:before{ content: "\E227" }
+
+.glyph-halflings-yen:before{ content: "\E228" }
+
+.glyph-halflings-ruble:before{ content: "\E229" }
+
+.glyph-halflings-scale:before{ content: "\E230" }
+
+.glyph-halflings-ice-lolly:before{ content: "\E231" }
+
+.glyph-halflings-ice-lolly-tasted:before{ content: "\E232" }
+
+.glyph-halflings-education:before{ content: "\E233" }
+
+.glyph-halflings-option-horizontal:before{ content: "\E234" }
+
+.glyph-halflings-option-vertical:before{ content: "\E235" }
+
+.glyph-halflings-menu-hamburger:before{ content: "\E236" }
+
+.glyph-halflings-modal-window:before{ content: "\E237" }
+
+.glyph-halflings-oil:before{ content: "\E238" }
+
+.glyph-halflings-grain:before{ content: "\E239" }
+
+.glyph-halflings-sunglasses:before{ content: "\E240" }
+
+.glyph-halflings-text-size:before{ content: "\E241" }
+
+.glyph-halflings-text-color:before{ content: "\E242" }
+
+.glyph-halflings-text-background:before{ content: "\E243" }
+
+.glyph-halflings-object-align-top:before{ content: "\E244" }
+
+.glyph-halflings-object-align-bottom:before{ content: "\E245" }
+
+.glyph-halflings-object-align-horizontal:before{ content: "\E246" }
+
+.glyph-halflings-object-align-left:before{ content: "\E247" }
+
+.glyph-halflings-object-align-vertical:before{ content: "\E248" }
+
+.glyph-halflings-object-align-right:before{ content: "\E249" }
+
+.glyph-halflings-triangle-right:before{ content: "\E250" }
+
+.glyph-halflings-triangle-left:before{ content: "\E251" }
+
+.glyph-halflings-triangle-bottom:before{ content: "\E252" }
+
+.glyph-halflings-triangle-top:before{ content: "\E253" }
+
+.glyph-halflings-terminal:before{ content: "\E254" }
+
+.glyph-halflings-superscript:before{ content: "\E255" }
+
+.glyph-halflings-subscript:before{ content: "\E256" }
+
+.glyph-halflings-menu-left:before{ content: "\E257" }
+
+.glyph-halflings-menu-right:before{ content: "\E258" }
+
+.glyph-halflings-menu-down:before{ content: "\E259" }
+
+.glyph-halflings-menu-up:before{ content: "\E260" }
+
+.glyph-halflings-building:before{ content: "\E261" }
+
+.glyph-halflings-tick:before{ content: "\E262" }
+
+.glyph-halflings-star-half:before{ content: "\E263" }
+
+.glyph-halflings-hash:before{ content: "\E264" }
+
+.glyph-halflings-directions:before{ content: "\E265" }
+
+.glyph-halflings-gas:before{ content: "\E266" }
+
+.glyph-halflings-snowflake:before{ content: "\E267" }
+
+.glyph-halflings-sunlight:before{ content: "\E268" }
+
+.glyph-halflings-selectbox:before{ content: "\E269" }
+
+.glyph-halflings-sortable:before{ content: "\E270" }
+
+.glyph-halflings-note-empty:before{ content: "\E271" }
+
+.glyph-halflings-note:before{ content: "\E272" }
+
+.glyph-halflings-direction-right:before{ content: "\E273" }
+
+.glyph-halflings-direction-left:before{ content: "\E274" }
+
+.glyph-halflings-direction-down:before{ content: "\E275" }
+
+.glyph-halflings-direction-up:before{ content: "\E276" }
+
+.glyph-halflings-parking:before{ content: "\E277" }
+
+.glyph-halflings-coffee-cup:before{ content: "\E278" }
+
+.glyph-halflings-record-empty:before{ content: "\E279" }
+
+.glyph-halflings-move-square:before{ content: "\E280" }
+
+.glyph-halflings-bug:before{ content: "\E281" }
+
+.glyph-halflings-display:before{ content: "\E282" }
+
+.glyph-halflings-direction:before{ content: "\E283" }
+
+.glyph-halflings-group:before{ content: "\E284" }
+
+.glyph-halflings-reflect-y:before{ content: "\E285" }
+
+.glyph-halflings-reflect-x:before{ content: "\E286" }
+
+.glyph-halflings-battery-charging:before{ content: "\E287" }
+
+.glyph-halflings-battery-full:before{ content: "\E288" }
+
+.glyph-halflings-battery-75:before{ content: "\E289" }
+
+.glyph-halflings-battery-50:before{ content: "\E290" }
+
+.glyph-halflings-battery-25:before{ content: "\E291" }
+
+.glyph-halflings-battery-10:before{ content: "\E292" }
+
+.glyph-halflings-paired:before{ content: "\E293" }
+
+.glyph-halflings-rotate-right:before{ content: "\E294" }
+
+.glyph-halflings-rotate-left:before{ content: "\E295" }
+
+.glyph-halflings-list-numbered:before{ content: "\E296" }
+
+.glyph-halflings-paragraph:before{ content: "\E297" }
+
+.glyph-halflings-list-plus:before{ content: "\E298" }
+
+.glyph-halflings-synchronization:before{ content: "\E299" }
+
+.glyph-halflings-cube-black:before{ content: "\E300" }

@@ -1,0 +1,120 @@
+$color-brand: #4E4442; //4E4442
+$color-white: #F8F9FA;
+$color-border: #a4aca8;
+$color-text: #444444;
+
+body{
+  background: #ffffff;
+  color: $color-text;
+  font-family: proxima-nova, sans-serif;
+  font-style: normal;
+  font-weight: 100;
+}
+
+#page{
+  display: flex;
+  min-height: 100vh;
+}
+
+main{
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
+header{}
+
+.header-container{
+  background: lighten($color-brand, 30%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  border-bottom: 2px solid darken($color-brand, 10%);
+}
+
+section{
+  padding: 20px;
+  flex-grow: 1;
+}
+
+footer{}
+
+thead{
+  font-weight: bold;
+}
+
+a{
+  cursor: pointer;
+  &:hover{
+    text-decoration: none;
+  }
+}
+
+.btn-brand{
+  background: $color-brand;
+  color: $color-white;
+  border-color: darken($color-brand, 10%);
+
+  &:hover, &:focus{
+    background: lighten($color-brand, 10%);
+    border-color: darken($color-brand, 10%);
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
+  }
+}
+
+.form-input{
+  color: $color-text;
+  &:focus{
+    border-color: $color-brand;
+    box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
+  }
+}
+
+.form-select{
+  &:focus{
+    border-color: $color-brand;
+    box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
+  }
+}
+
+.table.table-striped tbody tr:nth-of-type(odd){
+  background: lighten($color-brand, 60%);
+}
+
+.table.table-hover tbody tr:hover{
+  background: lighten($color-brand, 65%);
+}
+
+.frame{
+  background: lighten($color-brand, 60%);
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  border: 1px solid $color-brand;
+  border-radius: .1rem;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.accordion{
+  background: deepskyblue;
+  margin-bottom: 20px;
+}
+
+.accordion-header{
+  background: lighten($color-brand, 30%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.accordion-body{
+  background: lighten($color-brand, 50%);
+}
