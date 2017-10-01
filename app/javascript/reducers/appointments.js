@@ -12,7 +12,7 @@ export default function(){
             id: 2,
             customer: 'Birand Yonder',
             time: '11:30pm - 12:00pm',
-            date: 'Thu Sep 14 2017 14:12:06 GMT-0400 (EDT)',
+            date: 'Thu Sep 14 2017 15:12:06 GMT-0400 (EDT)',
             service: 'Haircut',
             status: 'Pending'
         },
@@ -20,7 +20,7 @@ export default function(){
             id: 3,
             customer: 'Anyss Hamza',
             time: '11:30pm - 12:00pm',
-            date: 'Thu Sep 14 2017 14:12:06 GMT-0400 (EDT)',
+            date: 'Thu Sep 14 2017 16:12:06 GMT-0400 (EDT)',
             service: 'Haircut',
             status: 'Pending'
         },
@@ -28,7 +28,7 @@ export default function(){
             id: 4,
             customer: 'Arda Ersan',
             time: '11:30pm - 12:00pm',
-            date: 'Thu Sep 16 2017 14:12:06 GMT-0400 (EDT)',
+            date: 'Thu Sep 16 2017 17:12:06 GMT-0400 (EDT)',
             service: 'Haircut',
             status: 'Pending'
         },
@@ -36,7 +36,7 @@ export default function(){
             id: 5,
             customer: 'Cagim Gunes',
             time: '11:30pm - 12:00pm',
-            date: 'Thu Sep 16 2017 14:12:06 GMT-0400 (EDT)',
+            date: 'Thu Sep 16 2017 18:12:06 GMT-0400 (EDT)',
             service: 'Haircut',
             status: 'Pending'
         },
@@ -44,7 +44,7 @@ export default function(){
             id: 6,
             customer: 'Bahadir Ozden',
             time: '11:30pm - 12:00pm',
-            date: 'Thu Sep 15 2017 14:12:06 GMT-0400 (EDT)',
+            date: 'Thu Sep 15 2017 19:12:06 GMT-0400 (EDT)',
             service: 'Haircut',
             status: 'Pending'
         }

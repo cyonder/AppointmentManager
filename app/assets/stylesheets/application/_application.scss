@@ -4,7 +4,7 @@ $color-border: #a4aca8;
 $color-text: #444444;
 
 body{
-  background: #ffffff;
+  background: #eeeeee;
   color: $color-text;
   font-family: proxima-nova, sans-serif;
   font-style: normal;
@@ -42,6 +42,7 @@ footer{}
 
 thead{
   font-weight: bold;
+  background: #eeeeee;
 }
 
 a{
@@ -81,6 +82,15 @@ a{
   }
 }
 
+.form-label{
+  padding-top: 0;
+  font-weight: bold;
+}
+
+.has-error{
+  //font-weight: bold;
+}
+
 .table.table-striped tbody tr:nth-of-type(odd){
   background: lighten($color-brand, 60%);
 }
@@ -89,25 +99,21 @@ a{
   background: lighten($color-brand, 65%);
 }
 
-.frame{
-  background: lighten($color-brand, 60%);
-  padding: 10px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  display: flex;
-  border: 1px solid $color-brand;
-  border-radius: .1rem;
-  justify-content: space-between;
-  align-content: center;
-}
-
 .accordion{
-  background: deepskyblue;
+  //background: deepskyblue;
   margin-bottom: 20px;
+  //border-top: 1px solid black;
+  //
+  //&:first-child{
+  //  border-top: 0;
+  //}
 }
 
 .accordion-header{
-  background: lighten($color-brand, 30%);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+
+  background: #dddddd;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -116,5 +122,13 @@ a{
 }
 
 .accordion-body{
-  background: lighten($color-brand, 50%);
+  background: #ffffff;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
+
+.p20{ padding: 20px }
+//.mb10{ margin-bottom: 10px }
+.mt10{ margin-top: 10px }
+.mb5{ margin-bottom: 5px; }
+.h80{ height: 80px }
