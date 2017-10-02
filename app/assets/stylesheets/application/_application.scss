@@ -1,4 +1,6 @@
 $color-brand: #4E4442; //4E4442
+$color-danger: #DA3849;
+$color-info: #25A2B6;
 $color-white: #F8F9FA;
 $color-border: #a4aca8;
 $color-text: #444444;
@@ -52,6 +54,8 @@ a{
   }
 }
 
+//----- Buttons
+
 .btn-brand{
   background: $color-brand;
   color: $color-white;
@@ -66,6 +70,38 @@ a{
     box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
   }
 }
+
+.btn-danger{
+  background: $color-danger;
+  color: $color-white;
+  border-color: darken($color-danger, 10%);
+
+  &:hover, &:focus{
+    background: lighten($color-danger, 10%);
+    border-color: darken($color-danger, 10%);
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
+  }
+}
+
+.btn-info{
+  background: $color-info;
+  color: $color-white;
+  border-color: darken($color-info, 10%);
+
+  &:hover, &:focus{
+    background: lighten($color-info, 10%);
+    border-color: darken($color-info, 10%);
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
+  }
+}
+
+//----- Forms
 
 .form-input{
   color: $color-text;
@@ -87,9 +123,17 @@ a{
   font-weight: bold;
 }
 
-.has-error{
-  //font-weight: bold;
+.form-switch input:focus + .form-icon{
+  border-color: $color-brand;
+  box-shadow: 0 0 0 0.1rem rgba($color-brand, 0.2);
 }
+
+.form-switch input:checked + .form-icon{
+  background: $color-brand;
+  border-color: $color-brand;
+}
+
+//----- Table
 
 .table.table-striped tbody tr:nth-of-type(odd){
   background: lighten($color-brand, 60%);
@@ -99,14 +143,14 @@ a{
   background: lighten($color-brand, 65%);
 }
 
+//----- Accordion
+
 .accordion{
-  //background: deepskyblue;
   margin-bottom: 20px;
-  //border-top: 1px solid black;
-  //
-  //&:first-child{
-  //  border-top: 0;
-  //}
+}
+
+.accordion-header.closed{
+  border-radius: 5px;
 }
 
 .accordion-header{
@@ -127,8 +171,37 @@ a{
   border-bottom-right-radius: 5px;
 }
 
+//----- Custom General
+
+.h6.line-behind-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin-bottom: 7px;
+
+  //&::before {
+  //  border-top: 2px solid #dddddd;
+  //  content: "";
+  //  margin: 0 auto;
+  //  position: absolute;
+  //  top: 50%;
+  //  left: 0;
+  //  right: 0;
+  //  bottom: 0;
+  //  z-index: -1;
+  //}
+
+  span{
+    background: #fff;
+    padding: 0 10px;
+  }
+}
+
+
 .p20{ padding: 20px }
 //.mb10{ margin-bottom: 10px }
 .mt10{ margin-top: 10px }
-.mb5{ margin-bottom: 5px; }
+.mb5{ margin-bottom: 5px }
+.mb20{ margin-bottom: 20px }
+.mr10{ margin-right: 10px }
 .h80{ height: 80px }
