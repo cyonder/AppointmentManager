@@ -37,7 +37,7 @@ class Navigation extends Component{
                         <span className="nav-text">Barbers</span>
                     </Link>
 
-                    <Link to="" className="nav-item">
+                    <Link to="/services" className="nav-item">
                         <img src="/images/services.svg" alt=""/>
                         <span className="nav-text">Services</span>
                     </Link>

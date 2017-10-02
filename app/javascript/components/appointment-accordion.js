@@ -54,10 +54,11 @@ class AppointmentAccordion extends Component{
 
     render(){
         const activeClass = this.state.accordionToggle ? "d-block" : "d-none";
+        const headerClass = this.state.accordionToggle ? "opened" : "closed";
 
         return(
           <div className="accordion">
-              <div className="accordion-header" onClick={ () => this.toggleAccordion() }>
+              <div className={`accordion-header ${headerClass}`} onClick={ () => this.toggleAccordion() }>
                   <div className="h4">{ formatDate(this.props.date) }</div>
                   <div className="h6">{ this.props.length } Appointments</div>
               </div>

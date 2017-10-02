@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
-/** @namespace this.props.barber */
 
 class BarberAccordion extends Component{
     constructor(){
         super();
 
         this.state = {
-            accordionToggle: false
+            accordionToggle: true
         };
 
         this.toggleAccordion = this.toggleAccordion.bind(this);
@@ -80,20 +78,24 @@ class BarberAccordion extends Component{
                         />
                     </div>
                 </div>
-                <button type="submit" className="btn btn-brand mt10">Submit</button>
+
+                <button type="submit" className="btn btn-brand mr10">Update</button>
+                <button type="submit" className="btn btn-info mr10">Freeze</button>
+                <button type="submit" className="btn btn-danger">Delete</button>
             </form>
         );
     }
 
     render(){
         const activeClass = this.state.accordionToggle ? "d-block" : "d-none";
+        const headerClass = this.state.accordionToggle ? "opened" : "closed";
 
         return(
             <div className="accordion">
-                <div className="accordion-header" onClick={ () => this.toggleAccordion() }>
+                <div className={`h6 accordion-header ${headerClass}`} onClick={ () => this.toggleAccordion() }>
                     { this.props.first_name + " " + this.props.last_name }
                 </div>
-                <div className={activeClass + " accordion-body p20"}>
+                <div className={`p20 accordion-body ${activeClass}`}>
                     { this.renderForm() }
                 </div>
             </div>
@@ -106,19 +108,19 @@ const validate = values =>{
     const errors = {};
 
     if(!values.first_name){
-        errors.first_name = "Enter first name!";
+        errors.first_name = "This field is required!";
     }
 
     if(!values.last_name){
-        errors.last_name = "Enter last name!";
+        errors.last_name = "This field is required!";
     }
 
     if(!values.phone){
-        errors.phone = "Enter phone number!";
+        errors.phone = "This field is required!";
     }
 
     if(!values.email){
-        errors.email = "Enter email!";
+        errors.email = "This field is required!";
     }
 
     return errors;
