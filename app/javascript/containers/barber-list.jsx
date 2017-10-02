@@ -14,6 +14,7 @@ class BarberList extends Component{
                     last_name={ barber.last_name }
                     phone={ barber.phone }
                     email={ barber.email }
+                    initialValues={ barber }
                 />
             );
         })

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
+/** @namespace this.props.barber */
 
 class BarberAccordion extends Component{
     constructor(){
@@ -123,46 +124,7 @@ const validate = values =>{
     return errors;
 };
 
-// function mapStateToProps(state){
-//     return{
-//         barbers: state.barbers
-//     }
-// }
-
-InitializeFromStateForm = reduxForm({
-    form: 'editBarberForm',
+export default reduxForm({
+    form: 'barberForm',
     validate: validate,
-    enableReinitialize : true
 })(BarberAccordion);
-
-InitializeFromStateForm = connect(
-    state => ({
-        initialValues: state.barbers
-    })
-)(InitializeFromStateForm);
-
-// export default connect(mapStateToProps)(BarberAccordion);
-/*
-    export default reduxForm({
-        form: 'barberForm',
-        validate: validate,
-        enableReinitialize : true
-    })(BarberAccordion);
-*/
-
-
-    // Decorate with reduxForm(). It will read the initialValues prop provided by connect()
-    // InitializeFromStateForm = reduxForm({
-    //     form: 'initializeFromState' // a unique identifier for this form
-    // })(InitializeFromStateForm)
-    //
-    // // You have to connect() to any reducers that you wish to connect to yourself
-    // InitializeFromStateForm = connect(
-    //     state => ({
-    //         initialValues: state.account.data // pull initial values from account reducer
-    //     }),
-    //     { load: loadAccount } // bind account loading action creator
-    // )(InitializeFromStateForm)
-    //
-    //
-    // export default InitializeFromStateForm
