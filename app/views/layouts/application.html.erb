@@ -6,14 +6,14 @@
     <title>Appointment Manager</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <% javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <script src="https://use.typekit.net/tdp1ddx.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
 
   <body>
-    <%= yield %>
-    <div id="application"></div>
+    <% yield %>
+    <div id="root"></div>
     <%= javascript_pack_tag 'application' %>
   </body>
 </html>

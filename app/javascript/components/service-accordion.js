@@ -32,10 +32,10 @@ class ServiceAccordion extends Component{
             );
         });
     }
-    
+
     renderTextField(field){
         const { meta: { touched, error } } = field;
-        const className = `form-group ${touched && error ? 'has-error' : ''}`;
+        const className = `form-group h80 ${touched && error ? 'has-error' : ''}`;
 
         return(
             <div className={ className }>
@@ -64,19 +64,16 @@ class ServiceAccordion extends Component{
                 <div className="columns mb5">
                     <div className="column">
                         <Field
-                            className="h80"
                             label="Service Name"
                             name="service_name"
                             component={ this.renderTextField }
                         />
                         <Field
-                            className="h80"
                             label="Time"
                             name="time"
                             component={ this.renderTextField }
                         />
                         <Field
-                            className="h80"
                             label="Price"
                             name="price"
                             component={ this.renderTextField }

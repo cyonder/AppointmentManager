@@ -5,12 +5,10 @@ import ServicesReducer from './services';
 import UIReducer from './ui';
 import { reducer as formReducer } from 'redux-form';
 
-const applicationReducer = combineReducers({
+export default combineReducers({
     form: formReducer,
     appointments: AppointmentReducer,
     barbers: BarberReducer,
     services: ServicesReducer,
     ui: UIReducer
 });
-
-export default applicationReducer;
