@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 import { toggleNav } from "../actions/ui";
 import { bindActionCreators } from 'redux';
@@ -21,41 +22,41 @@ class Navigation extends Component{
                     </div>
                 </div>
                 <div id="nav-body">
-                    <a className="nav-item">
+                    <Link to="" className="nav-item">
                         <img src="/images/dashboard.svg" alt=""/>
                         <span className="nav-text">Dashboard</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-item">
+                    <Link to="/appointments" className="nav-item">
                         <img src="/images/appointments.svg" alt=""/>
                         <span className="nav-text">Appointments</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-item">
+                    <Link to="/barbers" className="nav-item">
                         <img src="/images/barbers.svg" alt=""/>
                         <span className="nav-text">Barbers</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-item">
+                    <Link to="" className="nav-item">
                         <img src="/images/services.svg" alt=""/>
                         <span className="nav-text">Services</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-item">
+                    <Link to="" className="nav-item">
                         <img src="/images/reviews.svg" alt=""/>
                         <span className="nav-text">Reviews</span>
-                    </a>
+                    </Link>
 
-                    <a className="nav-item">
+                    <Link to="" className="nav-item">
                         <img src="/images/reports.svg" alt=""/>
                         <span className="nav-text">Reports</span>
-                    </a>
+                    </Link>
                 </div>
                 <div id="nav-footer">
-                    <a className="nav-item">
+                    <Link to="" className="nav-item">
                         <img src="/images/settings.svg" alt=""/>
                         <span className="nav-text">Settings</span>
-                    </a>
+                    </Link>
                 </div>
             </nav>
         );
