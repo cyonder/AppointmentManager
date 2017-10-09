@@ -18,7 +18,7 @@ class BarberList extends Component{
 
     render(){
         return(
-            <section>
+            <section id="app">
                 {this.renderList()}
             </section>
         );

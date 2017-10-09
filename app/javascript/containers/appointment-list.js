@@ -37,7 +37,7 @@ class AppointmentList extends Component{
         }, {});
 
         return(
-            <section>
+            <section id="app">
                 { this.renderList(newDateArray) }
             </section>
         );

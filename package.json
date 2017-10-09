@@ -4,10 +4,13 @@
   "dependencies": {
     "@rails/webpacker": "^3.0.0",
     "babel-preset-react": "^6.24.1",
+    "fullpage.js": "^2.9.4",
+    "jquery": "^3.2.1",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-fullpage": "^0.1.18",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "redux": "^3.7.2",

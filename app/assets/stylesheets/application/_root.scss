@@ -1,4 +1,4 @@
-$color-brand: #4E4442; //4E4442
+$color-brand: #42536A; //4E4442 - 242E3B - 2477ED - 42536A
 $color-danger: #DA3849;
 $color-info: #25A2B6;
 $color-white: #F8F9FA;
@@ -35,7 +35,7 @@ header{}
   border-bottom: 2px solid darken($color-brand, 10%);
 }
 
-section{
+section#app{
   padding: 20px;
   flex-grow: 1;
 }
@@ -48,20 +48,50 @@ thead{
 }
 
 a{
+  color: $color-brand;
   cursor: pointer;
-  &:hover{
+
+  &:hover, &:focus, &:active{
+    color: lighten($color-brand, 10%);
     text-decoration: none;
   }
 }
 
 //----- Buttons
 
+.btn{
+  background: $color-white;
+  color: $color-brand;
+  border-color: darken($color-white, 10%);
+
+  &:hover, &:focus, &:active{
+    color: $color-brand;
+    background: darken($color-white, 5%);
+    border-color: darken($color-white, 10%);
+  }
+
+  &:focus{
+    box-shadow: 0 0 0 0.1rem rgba($color-white, 0.2);
+  }
+
+  &.btn-link{
+    color: $color-brand;
+
+    &:hover, &:focus, &:active{
+      color: $color-brand;
+      //background: darken($color-white, 5%);
+      //border-color: darken($color-white, 10%);
+    }
+  }
+}
+
 .btn-brand{
   background: $color-brand;
   color: $color-white;
   border-color: darken($color-brand, 10%);
 
-  &:hover, &:focus{
+  &:hover, &:focus, &:active{
+    color: $color-white;
     background: lighten($color-brand, 10%);
     border-color: darken($color-brand, 10%);
   }
@@ -76,7 +106,8 @@ a{
   color: $color-white;
   border-color: darken($color-danger, 10%);
 
-  &:hover, &:focus{
+  &:hover, &:focus, &:active{
+    color: $color-white;
     background: lighten($color-danger, 10%);
     border-color: darken($color-danger, 10%);
   }
@@ -91,7 +122,8 @@ a{
   color: $color-white;
   border-color: darken($color-info, 10%);
 
-  &:hover, &:focus{
+  &:hover, &:focus, &:active{
+    color: $color-white;
     background: lighten($color-info, 10%);
     border-color: darken($color-info, 10%);
   }
@@ -205,3 +237,7 @@ a{
 .mb20{ margin-bottom: 20px }
 .mr10{ margin-right: 10px }
 .h80{ height: 80px }
+
+.direction-column{ // Used in index, signup and login components
+  flex-direction: column;
+}

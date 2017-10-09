@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-    export default class Footer extends Component{
+class Footer extends Component{
     render(){
         return(
-            <footer>
-
+            <footer id="index-footer" className="animated bounce">
+                <Link to="/">
+                    <span>What is Barberate?</span>
+                    <img src="/images/down-arrow.svg"/>
+                </Link>
             </footer>
         );
     }
 }
+
+export default Footer;

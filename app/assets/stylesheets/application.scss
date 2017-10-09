@@ -1,8 +1,11 @@
 @import "base/spectre.min";
 @import "base/glyphicons";
 @import "base/glyphicons-halflings";
+//@import "javascript.fullPage";
+//@import "base/jquery.fullpage.min.css";
+//@import "fullpage.js/dist/jquery.fullpage.css";
 
-@import "application/application";
-@import "application/dashboard";
+@import "application/root";
 @import "application/navigation";
-@import "application/appointments";
+@import "application/login";
+@import "application/index";
