@@ -7,7 +7,7 @@ const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
 const API_KEY = '?key=94drtfsm144';
 
 export function fetchBarbers(){
-    const promise = axios.get(`${ROOT_URL}/barbers.json`);
+    const promise = axios.get(`${ROOT_URL}/barbers.json${API_KEY}`);
     return{
         type: FETCH_BARBERS,
         payload: promise
