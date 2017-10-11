@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da063e16-38e2-4590-913c-83277539c48b" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/barbers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/barbers_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/actions/barber.js" afterPath="$PROJECT_DIR$/app/javascript/actions/barber.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/reducers/barbers.js" afterPath="$PROJECT_DIR$/app/javascript/reducers/barbers.js" />
     </list>
@@ -106,8 +106,8 @@
               <file leaf-file-name="barbers.js" pinned="false" current-in-tab="true">
                 <entry file="file://$PROJECT_DIR$/app/javascript/reducers/barbers.js">
                   <provider selected="true" editor-type-id="text-editor">
-                    <state relative-caret-position="46">
-                      <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+                    <state relative-caret-position="241">
+                      <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
                       <folding />
                     </state>
                   </provider>
@@ -132,8 +132,8 @@
           <file leaf-file-name="barber.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/javascript/actions/barber.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-51">
-                  <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <state relative-caret-position="105">
+                  <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                     <element signature="e#335#369#0" expanded="false" />
@@ -238,9 +238,9 @@
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/app/javascript/packs/application.js" />
         <option value="$PROJECT_DIR$/app/javascript/components/barbers/barber-create-modal.js" />
-        <option value="$PROJECT_DIR$/app/javascript/actions/barber.js" />
         <option value="$PROJECT_DIR$/app/controllers/api/v1/barbers_controller.rb" />
         <option value="$PROJECT_DIR$/app/javascript/reducers/barbers.js" />
+        <option value="$PROJECT_DIR$/app/javascript/actions/barber.js" />
       </list>
     </option>
   </component>
@@ -488,7 +488,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="390483000" />
+    <option name="totallyTimeSpent" value="390688000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -892,18 +892,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/javascript/actions/barber.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#335#369#0" expanded="false" />
-            <element signature="e#532#582#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/api/v1/barbers_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -914,9 +902,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/reducers/barbers.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="5" column="59" lean-forward="true" selection-start-line="5" selection-start-column="59" selection-end-line="5" selection-end-column="59" />
+        <state relative-caret-position="241">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/javascript/actions/barber.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="35" lean-forward="true" selection-start-line="7" selection-start-column="35" selection-end-line="7" selection-end-column="35" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#335#369#0" expanded="false" />
+            <element signature="e#532#582#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

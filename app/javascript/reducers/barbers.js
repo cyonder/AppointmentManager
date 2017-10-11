@@ -10,7 +10,8 @@ export default function barberReducer(state = {}, action){
             console.log("action.payload", action.barber);
             console.log("action.payload.data", action.barber.data);
             // return { ...state, all: action.payload.data };
-            return { ...state, ...action.payload.data };
+            // return { ...state, ...action.payload.data };
+            return { ...state, ...action.barber };
             // return action.payload.data;
 
         default:
