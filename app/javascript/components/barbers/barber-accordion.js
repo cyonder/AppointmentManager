@@ -6,7 +6,7 @@ class BarberAccordion extends Component{
         super();
 
         this.state = {
-            accordionToggle: true
+            accordionToggle: false
         };
 
         this.toggleAccordion = this.toggleAccordion.bind(this);

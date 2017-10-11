@@ -177,6 +177,29 @@ a{
 
 //----- Accordion
 
+.modal-container{
+  min-width: 50vw;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.modal-header{
+  background-color: lighten($color-brand, 20%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-body{
+  //padding: 20px 20px 0 20px;
+  //background-color: #ffaf24;
+}
+
+//----- Accordion
+
 .accordion{
   margin-bottom: 20px;
 }

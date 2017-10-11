@@ -1,32 +1,15 @@
-export default function(){
-    return[
-        {
-            id: 1,
-            first_name: 'Cagdas',
-            last_name: 'Yonder',
-            phone: '6478780090',
-            email: 'email@email.com',
-        },
-        {
-            id: 2,
-            first_name: 'Birand',
-            last_name: 'Yonder',
-            phone: '6478780090',
-            email: 'email@email.com',
-        },
-        {
-            id: 3,
-            first_name: 'Arda',
-            last_name: 'Ersan',
-            phone: '6478780090',
-            email: 'email@email.com',
-        },
-        {
-            id: 4,
-            first_name: 'Cagim',
-            last_name: 'Gunes',
-            phone: '6478780090',
-            email: 'email@email.com',
-        }
-    ]
+import { CREATE_BARBER, FETCH_BARBERS } from '../config/action-types';
+
+export default function barberReducer(state = {}, action){
+    switch(action.type){
+        case FETCH_BARBERS:
+            return { ...state, ...action.payload.data };
+
+        case CREATE_BARBER:
+            // return { ...state, all: action.payload.data };
+            return action.payload.data;
+
+        default:
+            return state;
+    }
 }

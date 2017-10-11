@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import AppointmentAccordion from '../components/appointment-accordion';
+import AppointmentAccordion from './appointment-accordion';
 import moment from "moment";
 
 class AppointmentList extends Component{

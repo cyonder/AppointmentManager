@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ServiceAccordion from "../components/service-accordion";
+import ServiceAccordion from "./service-accordion";
 
 class BarberList extends Component{
     renderList(){

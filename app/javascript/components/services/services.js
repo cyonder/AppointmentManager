@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navigation from '../containers/navigation';
-import ServicesList from '../containers/services-list';
-import ServicesListHeader from '../containers/services-list-header';
+import Navigation from '../navigation';
+import ServicesList from './services-list';
+import ServicesListHeader from './services-list-header';
 
 class Services extends Component{
     render(){

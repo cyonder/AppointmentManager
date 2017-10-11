@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import { connect } from 'react-redux';
 
 class BarberListHeader extends Component{
     render(){
@@ -18,10 +17,9 @@ class BarberListHeader extends Component{
                     </div>
 
                     <div className="">
-                        <button className="btn btn-brand">Add Barber</button>
+                        <button className="btn btn-brand" onClick={ () => this.props.toggleModal() } >Add Barber</button>
                     </div>
                 </div>
-                {/*<div className="header-headline"></div>*/}
             </header>
         );
     };

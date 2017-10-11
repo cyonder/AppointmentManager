@@ -9,7 +9,7 @@ class Navigation extends Component{
     render(){
         return(
             <nav className={ this.props.ui.navToggle ? "nav-open" : ""}>
-                <div id="nav-header" onClick={ () => this.props.toggleNav() }>
+                <div id="nav-header" onClick={ () => this.props.toggleNav(!this.props.ui.navToggle) }>
                     <div
                         id="shop-name"
                         className={ !this.props.ui.navToggle ? "hide" : ""}>

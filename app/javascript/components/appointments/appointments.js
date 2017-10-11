@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navigation from '../containers/navigation';
-import AppointmentList from '../containers/appointment-list';
-import AppointmentListHeader from '../containers/appointment-list-header';
+import Navigation from '../navigation';
+import AppointmentList from './appointment-list';
+import AppointmentListHeader from './appointment-list-header';
 
 class Appointments extends Component{
     render(){

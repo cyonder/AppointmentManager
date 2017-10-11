@@ -3,12 +3,12 @@ import { Route, BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import Index from '../containers/index';
-import Login from '../containers/login';
-import Signup from '../containers/signup';
-import Appointments from '../components/appointments';
-import Barbers from '../components/barbers';
-import Services from '../components/services';
+import Index from '../components/index';
+import Login from '../components/login';
+import Signup from '../components/signup';
+import Appointments from '../components/appointments/appointments';
+import Barbers from '../components/barbers/barbers';
+import Services from '../components/services/services';
 
 const Root = ({ store }) => {
     return(

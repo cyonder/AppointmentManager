@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-window.addEventListener("scroll", function(){
-    let header = document.getElementById("navigation");
-
-    if(window.scrollY > 50){
-        header.style.backgroundColor = "rgb(255, 255, 255)";
-    }else{
-        header.style.backgroundColor = "rgba(255, 255, 255, 0)";
-    }
-});
+// window.addEventListener("scroll", function(){
+//     let header = document.getElementById("navigation");
+//
+//     if(window.scrollY > 50){
+//         header.style.backgroundColor = "rgb(255, 255, 255)";
+//     }else{
+//         header.style.backgroundColor = "rgba(255, 255, 255, 0)";
+//     }
+// });
 
 class Header extends Component{
     render(){
