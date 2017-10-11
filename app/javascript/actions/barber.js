@@ -40,7 +40,7 @@ export const createBarberSuccess = (barber) => {
 
 export const fetchBarbers = () => {
     return (dispatch) => {
-        return axios.get(`${ROOT_URL}/barbers.json${API_KEY}`)
+        return axios.get(`${ROOT_URL}/barbers${API_KEY}`)
             .then(response => {
                 dispatch(fetchBarbersSuccess(response.data))
             })
