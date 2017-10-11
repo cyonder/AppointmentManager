@@ -2,8 +2,7 @@ import axios from 'axios';
 import { CREATE_BARBER, FETCH_BARBERS } from '../config/action-types';
 
 // const ROOT_URL = 'http://barber.cloud/api/v1';
-const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
-// const ROOT_URL = 'http://localhost:3000/api/v1';
+const ROOT_URL = 'http://localhost:3000/api/v1';
 const API_KEY = '?key=94drtfsm144';
 
 export function fetchBarbers(){
