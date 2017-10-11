@@ -2,7 +2,6 @@ import React, { Component} from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
 import { createBarber } from "../../actions/barber";
-import { toggleModal } from "../../actions/ui";
 
 class BarberAddModal extends Component{
     renderTextField(field){
@@ -19,10 +18,14 @@ class BarberAddModal extends Component{
     }
 
     onSubmit(values){
-        this.props.createBarber(values, () => {
+        this.props.createBarber(values);
+        // this.props.createBarber(values, () => {
             // this.props.toggleModal();
-            this.props.history.push('/barbers');
-        });
+            // dispatch({
+                // type: "TOGGLE_MODAL"
+            // })
+            // this.props.history.push('/barbers');
+        // });
     }
 
     renderForm(){
@@ -77,5 +80,5 @@ class BarberAddModal extends Component{
 export default reduxForm({
     form: 'addBarberForm'
 })(
-    connect(null, { createBarber, toggleModal })(BarberAddModal)
+    connect(null, { createBarber })(BarberAddModal)
 );
