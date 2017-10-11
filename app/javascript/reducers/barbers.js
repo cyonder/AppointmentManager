@@ -7,8 +7,8 @@ export default function barberReducer(state = {}, action){
             return { ...state, ...action.barbers };
 
         case CREATE_BARBER:
-            console.log("action.payload", action.payload);
-            console.log("action.payload.data", action.payload.data);
+            console.log("action.payload", action.barber);
+            console.log("action.payload.data", action.barber.data);
             // return { ...state, all: action.payload.data };
             return { ...state, ...action.payload.data };
             // return action.payload.data;

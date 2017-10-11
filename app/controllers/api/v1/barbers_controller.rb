@@ -5,6 +5,9 @@ class Api::V1::BarbersController < Api::V1::BaseController
 
   def create
     respond_with :api, :v1, Barber.create(barber_params)
+
+    # barber = Barber.create(barber_params)
+    # render json: barber
   end
 
   private
