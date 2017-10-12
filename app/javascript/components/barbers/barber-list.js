@@ -10,13 +10,14 @@ class BarberList extends Component{
     }
 
     renderList(){
-        let barbers = this.props.barbers;
+        let barbers = new Object(this.props.barbers);
         return Object.keys(barbers).map((key, index) => {
             return(
                 <BarberAccordion
                     form={'form-' + index}
                     key={ index }
                     index={ index }
+                    id={ barbers[key].id }
                     first_name={ barbers[key].first_name }
                     last_name={ barbers[key].last_name }
                     phone={ barbers[key].phone }

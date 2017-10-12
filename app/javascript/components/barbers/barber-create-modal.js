@@ -1,9 +1,16 @@
-import React, { Component} from 'react';
+import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { createBarber } from "../../actions/barber";
+import { createBarber, fetchBarbers } from "../../actions/barber";
 
-class BarberAddModal extends Component{
+class BarberCreateModal extends Component{
+
+    constructor(props){
+        super(props);
+
+        this.onSubmit = this.onSubmit.bind(this);
+    };
+
     renderTextField(field){
         return(
             <div className="form-group">
@@ -18,14 +25,9 @@ class BarberAddModal extends Component{
     }
 
     onSubmit(values){
-        this.props.createBarber(values);
-        // this.props.createBarber(values, () => {
-            // this.props.toggleModal();
-            // dispatch({
-                // type: "TOGGLE_MODAL"
-            // })
-            // this.props.history.push('/barbers');
-        // });
+        this.props.createBarber(values, () => {
+            this.props.fetchBarbers();
+        });
     }
 
     renderForm(){
@@ -52,7 +54,7 @@ class BarberAddModal extends Component{
                     name="phone"
                     component={ this.renderTextField }
                 />
-                <button className="btn btn-brand">Add</button>
+                <button type="submit" className="btn btn-brand">Add</button>
             </form>
         );
     }
@@ -77,8 +79,14 @@ class BarberAddModal extends Component{
     }
 }
 
+function mapStateToProps(state){
+    return{
+        ui: state.ui
+    };
+}
+
 export default reduxForm({
-    form: 'addBarberForm'
+    form: 'createBarberForm'
 })(
-    connect(null, { createBarber })(BarberAddModal)
+    connect(mapStateToProps, { createBarber, fetchBarbers })(BarberCreateModal)
 );

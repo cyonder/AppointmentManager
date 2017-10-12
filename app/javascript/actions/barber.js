@@ -1,40 +1,43 @@
 import axios from 'axios';
-import { CREATE_BARBER, FETCH_BARBERS } from '../config/action-types';
+import {
+    CREATE_BARBER,
+    FETCH_BARBERS,
+    DELETE_BARBER,
+    UPDATE_BARBER
+} from '../config/action-types';
+
 import { toggleModal } from "./ui";
 
 // const ROOT_URL = 'http://barber.cloud/api/v1';
-const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
-// const ROOT_URL = 'http://localhost:3000/api/v1';
+// const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
+const ROOT_URL = 'http://localhost:3001/api/v1';
 const API_KEY = '?key=94drtfsm144';
-
-// export function fetchBarbers(){
-//     const promise = axios.get(`${ROOT_URL}/barbers.json${API_KEY}`);
-//     return{
-//         type: FETCH_BARBERS,
-//         payload: promise
-//     }
-// }
-
-// export function createBarber(values, callback){
-//     const request = axios.post(`${ROOT_URL}/barbers${API_KEY}`, values)
-//     .then( () => callback() );
-//     return{
-//         type: CREATE_BARBER,
-//         payload: request
-//     };
-// }
 
 export const fetchBarbersSuccess = (barbers) => {
     return {
         type: FETCH_BARBERS,
-        barbers
+        barbers: barbers
     }
 };
 
 export const createBarberSuccess = (barber) => {
     return {
         type: CREATE_BARBER,
-        barber
+        barber: barber
+    }
+};
+
+export const deleteBarberSuccess = (id) => {
+    return {
+        type: DELETE_BARBER,
+        id: id
+    }
+};
+
+export const updateBarberSuccess = (barber) => {
+    return {
+        type: UPDATE_BARBER,
+        barber: barber
     }
 };
 
@@ -42,7 +45,7 @@ export const fetchBarbers = () => {
     return (dispatch) => {
         return axios.get(`${ROOT_URL}/barbers${API_KEY}`)
             .then(response => {
-                dispatch(fetchBarbersSuccess(response.data))
+                dispatch(fetchBarbersSuccess(response.data));
             })
             .catch(error => {
                 throw(error);
@@ -50,18 +53,41 @@ export const fetchBarbers = () => {
     };
 };
 
-export const createBarber = (barber) => {
+export const createBarber = (barber, callback) => {
+    // TODO: Clear form field after submit
     return (dispatch) => {
         return axios.post(`${ROOT_URL}/barbers${API_KEY}`, barber)
             .then(response => {
-                dispatch(createBarberSuccess(response.data))
+                dispatch(createBarberSuccess(response.data));
             })
-            .then(() => {
-                dispatch(toggleModal())
-            })
+            .then( () => dispatch(toggleModal()) )
+            .then( () => callback() )
             .catch(error => {
-                // dispatch(toggleModal())
                 throw(error);
             });
     }
 };
+
+export function deleteBarber(id, callback){
+    return (dispatch) => {
+        return axios.delete(`${ROOT_URL}/barbers/${id}${API_KEY}`)
+            .then( () => dispatch(deleteBarberSuccess(id)) )
+            .then( () => callback() )
+            .catch(error => {
+                throw(error);
+            });
+    }
+}
+
+export function updateBarber(barber, callback){
+    return (dispatch) => {
+        return axios.put(`${ROOT_URL}/barbers/${barber.id}${API_KEY}`, barber)
+            .then( response => {
+                dispatch(updateBarberSuccess(response.data));
+            })
+            .then( () => callback() )
+            .catch(error => {
+                throw(error);
+            })
+    }
+}

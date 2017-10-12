@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
+import { connect } from "react-redux";
+import {
+    deleteBarber,
+    fetchBarbers ,
+    updateBarber
+} from "../../actions/barber";
 
 class BarberAccordion extends Component{
     constructor(){
@@ -10,6 +16,8 @@ class BarberAccordion extends Component{
         };
 
         this.toggleAccordion = this.toggleAccordion.bind(this);
+        this.onDelete = this.onDelete.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
     };
 
     toggleAccordion(){
@@ -37,8 +45,16 @@ class BarberAccordion extends Component{
         );
     }
 
+    onDelete(id){
+        this.props.deleteBarber(id, () => {
+            this.props.fetchBarbers();
+        });
+    }
+
     onSubmit(values){
-        console.log(values);
+        this.props.updateBarber(values, () => {
+            this.props.fetchBarbers();
+        });
     }
 
     renderForm(){
@@ -80,8 +96,12 @@ class BarberAccordion extends Component{
                 </div>
 
                 <button type="submit" className="btn btn-brand mr10">Update</button>
-                <button type="submit" className="btn btn-info mr10">Freeze</button>
-                <button type="submit" className="btn btn-danger">Delete</button>
+                <button type="button" className="btn btn-info mr10">Freeze</button>
+                <button
+                    type="button"
+                    className="btn btn-danger"
+                    onClick={ () => this.onDelete(this.props.id) }
+                >Delete</button>
             </form>
         );
     }
@@ -104,7 +124,6 @@ class BarberAccordion extends Component{
 }
 
 const validate = values =>{
-// function validate(values){
     const errors = {};
 
     if(!values.first_name){
@@ -129,4 +148,10 @@ const validate = values =>{
 export default reduxForm({
     form: 'barberForm',
     validate: validate,
-})(BarberAccordion);
+})(
+    connect(null, {
+        deleteBarber,
+        fetchBarbers,
+        updateBarber
+    })(BarberAccordion)
+);

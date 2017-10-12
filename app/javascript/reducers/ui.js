@@ -2,7 +2,7 @@ import { TOGGLE_NAV, TOGGLE_MODAL } from '../config/action-types';
 
 const initialState = {
     navToggle: false,
-    modalToggle: false
+    modalToggle: false,
 };
 
 export default function uiReducer(state = initialState, action){

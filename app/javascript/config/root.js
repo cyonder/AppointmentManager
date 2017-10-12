@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, BrowserRouter } from 'react-router-dom';
+import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import PropTypes from 'prop-types';
 
@@ -14,14 +14,14 @@ const Root = ({ store }) => {
     return(
         <Provider store={store}>
             <BrowserRouter>
-                <div>
+                <Switch>
                     <Route exact path="/" component={Index}/>
                     <Route path="/login" component={Login}/>
                     <Route path="/signup" component={Signup}/>
                     <Route path="/appointments" component={Appointments}/>
                     <Route path="/barbers" component={Barbers}/>
                     <Route path="/services" component={Services}/>
-                </div>
+                </Switch>
             </BrowserRouter>
         </Provider>
     );
