@@ -2,24 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="da063e16-38e2-4590-913c-83277539c48b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/javascript/config/constants.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata_i.len" afterPath="$PROJECT_DIR$/.idea/dataSources/509e6942-dce5-42c8-a3d4-065d6746d001/_metadata_/metadata_i.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/api/v1/barbers_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/api/v1/barbers_controller.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/actions/barber.js" afterPath="$PROJECT_DIR$/app/javascript/actions/barber.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/components/barbers/barber-accordion.js" afterPath="$PROJECT_DIR$/app/javascript/components/barbers/barber-accordion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/components/barbers/barber-create-modal.js" afterPath="$PROJECT_DIR$/app/javascript/components/barbers/barber-create-modal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/components/barbers/barber-list.js" afterPath="$PROJECT_DIR$/app/javascript/components/barbers/barber-list.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/config/action-types.js" afterPath="$PROJECT_DIR$/app/javascript/config/action-types.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/config/root.js" afterPath="$PROJECT_DIR$/app/javascript/config/root.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/reducers/barbers.js" afterPath="$PROJECT_DIR$/app/javascript/reducers/barbers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/javascript/reducers/ui.js" afterPath="$PROJECT_DIR$/app/javascript/reducers/ui.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -115,8 +98,8 @@
           <file leaf-file-name="barber.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/javascript/actions/barber.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1350">
-                  <caret line="90" column="14" lean-forward="true" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+                <state relative-caret-position="210">
+                  <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -498,12 +481,12 @@
       <workItem from="1506902058492" duration="24787000" />
       <workItem from="1506985889885" duration="79599000" />
       <workItem from="1507576677438" duration="49887000" />
-      <workItem from="1507779851276" duration="13333000" />
+      <workItem from="1507779851276" duration="13401000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="431994000" />
+    <option name="totallyTimeSpent" value="432062000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -901,8 +884,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/javascript/actions/barber.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1350">
-          <caret line="90" column="14" lean-forward="true" selection-start-line="90" selection-start-column="14" selection-end-line="90" selection-end-column="14" />
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
