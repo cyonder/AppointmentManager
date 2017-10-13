@@ -68,7 +68,7 @@ export const createBarber = (barber, callback) => {
     }
 };
 
-export function deleteBarber(id, callback){
+export const deleteBarber = (id, callback) => {
     return (dispatch) => {
         return axios.delete(`${ROOT_URL}/barbers/${id}${API_KEY}`)
             .then( () => dispatch(deleteBarberSuccess(id)) )
@@ -79,7 +79,7 @@ export function deleteBarber(id, callback){
     }
 }
 
-export function updateBarber(barber, callback){
+export const updateBarber = (barber, callback) => {
     return (dispatch) => {
         return axios.put(`${ROOT_URL}/barbers/${barber.id}${API_KEY}`, barber)
             .then( response => {

@@ -10,7 +10,10 @@ class BarberList extends Component{
     }
 
     renderList(){
+        console.log("in renderList - barbers list");
         let barbers = new Object(this.props.barbers);
+        console.log("barbers ", barbers);
+        console.log("GOING into accordion");
         return Object.keys(barbers).map((key, index) => {
             return(
                 <BarberAccordion
@@ -25,13 +28,13 @@ class BarberList extends Component{
                     initialValues={ barbers[key] }
                 />
             );
-        })
+        });
     };
 
     render(){
         return(
             <section id="app">
-                {this.renderList()}
+                { this.renderList() }
             </section>
         );
     };

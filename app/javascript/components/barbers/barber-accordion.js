@@ -11,19 +11,13 @@ class BarberAccordion extends Component{
     constructor(){
         super();
 
-        this.state = {
-            accordionToggle: false
-        };
-
+        this.state = { accordionToggle: false };
         this.toggleAccordion = this.toggleAccordion.bind(this);
         this.onDelete = this.onDelete.bind(this);
-        this.onSubmit = this.onSubmit.bind(this);
     };
 
     toggleAccordion(){
-        this.setState({
-            accordionToggle: !this.state.accordionToggle
-        });
+        this.setState({ accordionToggle: !this.state.accordionToggle });
     }
 
     renderTextField(field){
@@ -58,6 +52,7 @@ class BarberAccordion extends Component{
     }
 
     renderForm(){
+        console.log("in renderForm - accordion - 2");
         const { handleSubmit } = this.props;
 
         return(
@@ -101,12 +96,13 @@ class BarberAccordion extends Component{
                     type="button"
                     className="btn btn-danger"
                     onClick={ () => this.onDelete(this.props.id) }
-                >Delete</button>
+                    >Delete</button>
             </form>
         );
     }
 
     render(){
+        console.log("in render - accordion - 1 (in the accordion)");
         const activeClass = this.state.accordionToggle ? "d-block" : "d-none";
         const headerClass = this.state.accordionToggle ? "opened" : "closed";
 

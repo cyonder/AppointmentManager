@@ -1,6 +1,6 @@
 import {
-    CREATE_BARBER,
     FETCH_BARBERS,
+    CREATE_BARBER,
     DELETE_BARBER,
     UPDATE_BARBER
 } from '../config/action-types';

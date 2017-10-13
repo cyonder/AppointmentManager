@@ -1,32 +1,25 @@
-export default function(){
-    return[
-        {
-            id: 1,
-            service_name: 'Beard Trim',
-            price: '20',
-            time: '30',
-            barbers: [1,2]
-        },
-        {
-            id: 2,
-            service_name: 'Haircut',
-            price: '30',
-            time: '30',
-            barbers: [1,2,3]
-        },
-        {
-            id: 3,
-            service_name: 'Line Up',
-            price: '40',
-            time: '30',
-            barbers: [1,2,5]
-        },
-        {
-            id: 4,
-            service_name: 'Kids Haircut',
-            price: '15',
-            time: '30',
-            barbers: [2,5,6]
-        }
-    ]
+import{
+    FETCH_SERVICES,
+    CREATE_SERVICE,
+    DELETE_SERVICE,
+    UPDATE_SERVICE
+} from '../config/action-types';
+
+export default function serviceReducer(state = {}, action){
+    switch(action.type){
+        case FETCH_SERVICES:
+            return { ...state, ...action.services };
+
+        case CREATE_SERVICE:
+            return [ ...state, ...action.service ];
+
+        case DELETE_SERVICE:
+            return [ ...state, ...action.id ];
+
+        case UPDATE_SERVICE:
+            return [ ...state, ...action.service ];
+
+        default:
+            return state;
+    }
 }

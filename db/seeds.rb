@@ -22,3 +22,20 @@ Barber.create!(first_name: 'Cagim',
                last_name: 'Gunes',
                phone: '6478780090',
                email: 'email@email.com')
+
+
+Service.create!(service_name: 'Beard Trim',
+               price: '25',
+               time: '20')
+
+Service.create!(service_name: 'Haircut',
+                price: '30',
+                time: '30')
+
+Service.create!(service_name: 'Line Up',
+                price: '10',
+                time: '40')
+
+Service.create!(service_name: 'Kids Haircut',
+                price: '30',
+                time: '15')

@@ -17,7 +17,7 @@ class ServicesListHeader extends Component{
                     </div>
 
                     <div className="">
-                        <button className="btn btn-brand">Add Service</button>
+                        <button className="btn btn-brand" onClick={ () => this.props.toggleModal() }>Add Service</button>
                     </div>
                 </div>
             </header>

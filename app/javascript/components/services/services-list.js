@@ -1,16 +1,27 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ServiceAccordion from "./service-accordion";
+import { fetchServices } from '../../actions/service';
 
-class BarberList extends Component{
+class ServiceList extends Component{
+
+    componentDidMount(){
+        this.props.fetchServices();
+    }
+
     renderList(){
-        return this.props.services.map((service, index) => {
+        console.log("in renderList - services list");
+        let services = new Object(this.props.services);
+        console.log("services ", services);
+        console.log("GOING into accordion");
+        return Object.keys(services).map((key, index) => {
             return(
                 <ServiceAccordion
                     form={'form-' + index}
                     key={ index }
-                    service_name={ service.service_name }
-                    initialValues={ service }
+                    id={ services[key].id }
+                    service_name={ services[key].service_name }
+                    initialValues={ services[key] }
                 />
             );
         })
@@ -19,7 +30,7 @@ class BarberList extends Component{
     render(){
         return(
             <section id="app">
-                {this.renderList()}
+                { this.renderList() }
             </section>
         );
     };
@@ -31,4 +42,4 @@ function mapStateToProps(state){
     };
 }
 
-export default connect(mapStateToProps)(BarberList);
+export default connect(mapStateToProps, { fetchServices })(ServiceList);
