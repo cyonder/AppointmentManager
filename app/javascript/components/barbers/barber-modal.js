@@ -4,6 +4,10 @@ import { connect } from 'react-redux';
 import { createBarber, fetchBarbers } from "../../actions/barber";
 
 class BarberCreateModal extends Component{
+    constructor(){
+        super();
+        this.onSubmit = this.onSubmit.bind(this);
+    }
 
     renderTextField(field){
         return(
@@ -27,7 +31,7 @@ class BarberCreateModal extends Component{
     renderForm(){
         const { handleSubmit } = this.props;
         return(
-            <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
+            <form onSubmit={ handleSubmit(this.onSubmit) }>
                 <Field
                     label="First Name"
                     name="first_name"
@@ -54,7 +58,7 @@ class BarberCreateModal extends Component{
     }
 
     render(){
-        const activeClass = this.props.ui.modalToggle ? "active" : "";
+        const activeClass = this.props.ui.modalIsOpen ? "active" : "";
 
         return(
             <div className={`modal ${activeClass} modal-sm`}>

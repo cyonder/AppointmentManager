@@ -2,7 +2,8 @@ import{
     FETCH_SERVICES,
     CREATE_SERVICE,
     DELETE_SERVICE,
-    UPDATE_SERVICE
+    UPDATE_SERVICE,
+    GET_BARBERS_FOR_SERVICES
 } from '../config/action-types';
 
 export default function serviceReducer(state = {}, action){
@@ -18,6 +19,9 @@ export default function serviceReducer(state = {}, action){
 
         case UPDATE_SERVICE:
             return [ ...state, ...action.service ];
+
+        case GET_BARBERS_FOR_SERVICES:
+            return [ ...state, ...action.barbers_for_services];
 
         default:
             return state;

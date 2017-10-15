@@ -9,8 +9,8 @@ import {
 import { toggleModal } from "./ui";
 
 // const ROOT_URL = 'http://barber.cloud/api/v1';
-const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
-// const ROOT_URL = 'http://localhost:3001/api/v1';
+// const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
+const ROOT_URL = 'http://localhost:3000/api/v1';
 const API_KEY = '?key=94drtfsm144';
 
 export const fetchBarbersSuccess = (barbers) => {
@@ -43,9 +43,9 @@ export const updateBarberSuccess = (barber) => {
 
 export const fetchBarbers = () => {
     return (dispatch) => {
-        return axios.get(`${ROOT_URL}/barbers${API_KEY}`)
+        return axios.get(`${ROOT_URL}/users${API_KEY}`)
             .then(response => {
-                dispatch(fetchBarbersSuccess(response.data));
+                dispatch( fetchBarbersSuccess(response.data) );
             })
             .catch(error => {
                 throw(error);
@@ -56,11 +56,11 @@ export const fetchBarbers = () => {
 export const createBarber = (barber, callback) => {
     // TODO: Clear form field after submit
     return (dispatch) => {
-        return axios.post(`${ROOT_URL}/barbers${API_KEY}`, barber)
+        return axios.post(`${ROOT_URL}/users${API_KEY}`, barber)
             .then(response => {
-                dispatch(createBarberSuccess(response.data));
+                dispatch( createBarberSuccess(response.data) );
             })
-            .then( () => dispatch(toggleModal()) )
+            .then( () => dispatch( toggleModal() ))
             .then( () => callback() )
             .catch(error => {
                 throw(error);
@@ -70,8 +70,8 @@ export const createBarber = (barber, callback) => {
 
 export const deleteBarber = (id, callback) => {
     return (dispatch) => {
-        return axios.delete(`${ROOT_URL}/barbers/${id}${API_KEY}`)
-            .then( () => dispatch(deleteBarberSuccess(id)) )
+        return axios.delete(`${ROOT_URL}/users/${id}${API_KEY}`)
+            .then( () => dispatch( deleteBarberSuccess(id) ))
             .then( () => callback() )
             .catch(error => {
                 throw(error);
@@ -81,9 +81,9 @@ export const deleteBarber = (id, callback) => {
 
 export const updateBarber = (barber, callback) => {
     return (dispatch) => {
-        return axios.put(`${ROOT_URL}/barbers/${barber.id}${API_KEY}`, barber)
+        return axios.put(`${ROOT_URL}/users/${barber.id}${API_KEY}`, barber)
             .then( response => {
-                dispatch(updateBarberSuccess(response.data));
+                dispatch( updateBarberSuccess(response.data) );
             })
             .then( () => callback() )
             .catch(error => {

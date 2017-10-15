@@ -1,19 +1,22 @@
-import { TOGGLE_NAV, TOGGLE_MODAL } from '../config/action-types';
+import {
+    TOGGLE_NAVIGATION,
+    TOGGLE_MODAL
+} from '../config/action-types';
 
 const initialState = {
-    navToggle: false,
-    modalToggle: false,
+    navigationIsOpen: false,
+    modalIsOpen: false,
 };
 
 export default function uiReducer(state = initialState, action){
     switch(action.type){
-        case TOGGLE_NAV:
+        case TOGGLE_NAVIGATION:
             return Object.assign({}, state, {
-                navToggle: !state.navToggle
+                navigationIsOpen: !state.navigationIsOpen
             });
         case TOGGLE_MODAL:
             return Object.assign({}, state, {
-                modalToggle: !state.modalToggle
+                modalIsOpen: !state.modalIsOpen
             });
         default:
             return state;

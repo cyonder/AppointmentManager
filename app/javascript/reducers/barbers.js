@@ -5,7 +5,9 @@ import {
     UPDATE_BARBER
 } from '../config/action-types';
 
-export default function barberReducer(state = {}, action){
+const initialState = {};
+
+export default function barberReducer(state = initialState, action){
     switch(action.type){
         case FETCH_BARBERS:
             return { ...state, ...action.barbers };

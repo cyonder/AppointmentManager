@@ -9,23 +9,18 @@ class BarberList extends Component{
         this.props.fetchBarbers();
     }
 
-    renderList(){
-        console.log("in renderList - barbers list");
+    renderBarberList(){
         let barbers = new Object(this.props.barbers);
-        console.log("barbers ", barbers);
-        console.log("GOING into accordion");
+
         return Object.keys(barbers).map((key, index) => {
             return(
                 <BarberAccordion
-                    form={'form-' + index}
-                    key={ index }
-                    index={ index }
-                    id={ barbers[key].id }
-                    first_name={ barbers[key].first_name }
-                    last_name={ barbers[key].last_name }
-                    phone={ barbers[key].phone }
-                    email={ barbers[key].email }
-                    initialValues={ barbers[key] }
+                    key           = { index                   }
+                    form          = { 'form-' + index         }
+                    initialValues = { barbers[key]            }
+                    id            = { barbers[key].id         }
+                    first_name    = { barbers[key].first_name }
+                    last_name     = { barbers[key].last_name  }
                 />
             );
         });
@@ -34,7 +29,7 @@ class BarberList extends Component{
     render(){
         return(
             <section id="app">
-                { this.renderList() }
+                { this.renderBarberList() }
             </section>
         );
     };

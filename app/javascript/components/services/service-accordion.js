@@ -1,42 +1,58 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { connect } from 'react-redux';
 import { Field, reduxForm } from 'redux-form';
-import PropTypes from 'prop-types';
-import { fetchBarbers } from "../../actions/barber";
+
 import {
-    deleteService,
     fetchServices,
-    updateService
+    deleteService,
+    updateService,
+    getBarbersForServices
 } from "../../actions/service";
+
+// const ROOT_URL = 'http://barber.cloud/api/v1';
+// const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
+const ROOT_URL = 'http://localhost:3000/api/v1';
+const API_KEY = '?key=94drtfsm144';
 
 class ServiceAccordion extends Component{
     constructor(){
         super();
-        this.state = { accordionToggle: false };
+
+        this.state = {
+            accordionIsOpen: false,
+            barbersForServices: []
+        };
+
         this.toggleAccordion = this.toggleAccordion.bind(this);
-        // this.renderBarberList = this.renderBarberList.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
+        this.onDelete = this.onDelete.bind(this);
     };
 
-    toggleAccordion(){
-        this.setState({ accordionToggle: !this.state.accordionToggle });
+    componentDidMount(){
+        let id = this.props.id;
+        console.log("ID: ", id);
+
+        // let getBarbersForServices =
+
+        axios.get(`${ROOT_URL}/services/barbers/${id}${API_KEY}`)
+            .then( response => {
+                console.log("response.data: ", response.data);
+                // this.setState({
+                //     barbersForServices: response.data
+                // });
+            })
+            .catch(error => {
+                throw(error);
+            })
+
+        // let response = this.props.getBarbersForServices(this.props.id);
+        // console.log("response: ", response.data);
     }
 
-    renderBarberList(){
-        // console.log("in renderBarberList - accordion - 3");
-        let barbers = new Object(this.props.barbers);
-        // console.log("barbers: ", barbers);
-        return Object.keys(barbers).map((key, index) => {
-            return(
-                <div className="form-group" key={index}>
-                    <label className="form-switch">
-                        <input type="checkbox" defaultChecked="defaultChecked"/>
-                        <i className="form-icon"></i>
-                        <span>{`${barbers[key].first_name} ${barbers[key].last_name}`}</span>
-                    </label>
-                </div>
-            );
-        });
-    };
+    toggleAccordion(){
+        this.setState({ accordionIsOpen: !this.state.accordionIsOpen });
+    }
 
     renderTextField(field){
         const { meta: { touched, error } } = field;
@@ -45,11 +61,11 @@ class ServiceAccordion extends Component{
         return(
             <div className={ className }>
                 <label className="form-label">{ field.label }</label>
-                <input
-                    type="text"
-                    className="form-input"
-                    { ...field.input }
-                />
+                    <input
+                        type="text"
+                        className="form-input"
+                        { ...field.input }
+                    />
                 <div className="form-input-hint">
                     { touched ? error : '' }
                 </div>
@@ -69,14 +85,30 @@ class ServiceAccordion extends Component{
         });
     }
 
+    renderBarberList(){
+        let barbers = new Object(this.props.barbers);
+        // console.log("Barbers: ", barbers);
+
+        return Object.keys(barbers).map((key, index) => {
+            return(
+                <div className="form-group" key={index}>
+                    <label className="form-switch">
+                        <input type="checkbox" defaultChecked="defaultChecked"/>
+                        <i className="form-icon"></i>
+                        <span>{`${barbers[key].first_name} ${barbers[key].last_name}`}</span>
+                    </label>
+                </div>
+            );
+        });
+    };
+
     renderForm(){
-        console.log("in renderForm - accordion - 2");
         const { handleSubmit } = this.props;
 
         return(
             <div className="columns">
                 <div className="column">
-                    <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
+                    <form onSubmit={ handleSubmit(this.onSubmit) }>
                         <Field
                             label="Service Name"
                             name="service_name"
@@ -113,9 +145,8 @@ class ServiceAccordion extends Component{
     }
 
     render(){
-        console.log("in render - accordion - 1 (in the accordion)");
-        const activeClass = this.state.accordionToggle ? "d-block" : "d-none";
-        const headerClass = this.state.accordionToggle ? "opened" : "closed";
+        const headerClass = this.state.accordionIsOpen ? "opened" : "closed";
+        const activeClass = this.state.accordionIsOpen ? "d-block" : "d-none";
 
         return(
             <div className="accordion">
@@ -130,8 +161,7 @@ class ServiceAccordion extends Component{
     }
 }
 
-const validate = values =>{
-// function validate(values){
+const validate = values => {
     const errors = {};
 
     if(!values.service_name){
@@ -151,7 +181,8 @@ const validate = values =>{
 
 function mapStateToProps(state){
     return{
-        barbers: state.barbers
+        barbers: state.barbers,
+        // barbers_services: state.barbers_services
     };
 }
 
@@ -160,14 +191,9 @@ export default reduxForm({
     validate: validate
 })(
     connect(mapStateToProps, {
-        fetchBarbers,
-        deleteService,
         fetchServices,
-        updateService
+        deleteService,
+        updateService,
+        getBarbersForServices
     })(ServiceAccordion)
 );
-// })(ServiceAccordion);
-
-// ServiceAccordion.propTypes = {
-//     barbers: PropTypes.object.isRequired
-// };

@@ -2,22 +2,19 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
-import { toggleNav } from "../actions/ui";
-import { bindActionCreators } from 'redux';
-
 class Navigation extends Component{
     render(){
         return(
-            <nav className={ this.props.ui.navToggle ? "nav-open" : ""}>
-                <div id="nav-header" onClick={ () => this.props.toggleNav(!this.props.ui.navToggle) }>
+            <nav className={ this.props.ui.navigationIsOpen ? "nav-open" : ""}>
+                <div id="nav-header" onClick={ () => this.props.toggleNavigation(!this.props.ui.navigationIsOpen) }>
                     <div
                         id="shop-name"
-                        className={ !this.props.ui.navToggle ? "hide" : ""}>
-                        Lahori's Hair Salon
+                        className={ !this.props.ui.navigationIsOpen ? "hide" : ""}>
+                        Lahori''s Hair Salon
                     </div>
                     <div
                         id="toggle-nav"
-                        className={this.props.ui.navToggle ? "rotate-icon" : ""}>
+                        className={ this.props.ui.navigationIsOpen ? "rotate-icon" : ""}>
                         <img src="/images/toggle.svg" alt=""/>
                     </div>
                 </div>
@@ -63,21 +60,4 @@ class Navigation extends Component{
     };
 }
 
-function mapStateToProps(state){
-    return{
-        ui: state.ui
-    }
-}
-
-// Anything returned from this function will end up as props
-// on the navigation container
-function mapDispatchToProps(dispatch){
-    // Whenever toggleNav is called, the result should be passed
-    // to all of our reducers
-    return bindActionCreators({ toggleNav: toggleNav }, dispatch);
-}
-
-// Promote sidebar from a component to a container - it needs to know
-// about this new dispatch method, toggleSidebar. Make it available
-// as a prop
-export default connect(mapStateToProps, mapDispatchToProps)(Navigation);
+export default Navigation;

@@ -3,8 +3,9 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :barbers, only: [:index, :create, :destroy, :update], defaults: {format: :json}
-      resources :services, only: [:index, :create, :destroy, :update], defaults: {format: :json}
+        get '/services/barbers/:id', to: 'services#getBarbersForServices'
+        resources :users, only: [:index, :create, :destroy, :update], defaults: {format: :json}
+        resources :services, only: [:index, :create, :destroy, :update], defaults: {format: :json}
     end
   end
 

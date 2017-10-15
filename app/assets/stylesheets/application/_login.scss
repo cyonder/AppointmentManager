@@ -1,10 +1,10 @@
 #form-container{
   background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
   padding: 40px;
   width: 450px;
   margin: auto;
   border-radius: 5px;
-  border: 1px solid darken(#fff, 10%);
 
   .h4{
     color: $color-brand;

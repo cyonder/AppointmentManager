@@ -21,6 +21,7 @@ const Root = ({ store }) => {
                     <Route path="/appointments" component={Appointments}/>
                     <Route path="/barbers" component={Barbers}/>
                     <Route path="/services" component={Services}/>
+                    <Route path="/services/barbers" component={Services}/>
                 </Switch>
             </BrowserRouter>
         </Provider>

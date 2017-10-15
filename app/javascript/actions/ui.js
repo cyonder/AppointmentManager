@@ -1,8 +1,8 @@
-import { TOGGLE_NAV, TOGGLE_MODAL } from '../config/action-types';
+import { TOGGLE_NAVIGATION, TOGGLE_MODAL } from '../config/action-types';
 
-export function toggleNav(){
+export function toggleNavigation(){
     return{
-        type: TOGGLE_NAV,
+        type: TOGGLE_NAVIGATION,
     };
 }
 

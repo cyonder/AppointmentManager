@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Field, reduxForm } from 'redux-form';
 import { connect } from "react-redux";
+import { Field, reduxForm } from 'redux-form';
 import {
-    deleteBarber,
     fetchBarbers ,
+    deleteBarber,
     updateBarber
 } from "../../actions/barber";
 
@@ -11,13 +11,15 @@ class BarberAccordion extends Component{
     constructor(){
         super();
 
-        this.state = { accordionToggle: false };
+        this.state = { accordionIsOpen: false };
+
         this.toggleAccordion = this.toggleAccordion.bind(this);
+        this.onSubmit = this.onSubmit.bind(this);
         this.onDelete = this.onDelete.bind(this);
     };
 
     toggleAccordion(){
-        this.setState({ accordionToggle: !this.state.accordionToggle });
+        this.setState({ accordionIsOpen: !this.state.accordionIsOpen });
     }
 
     renderTextField(field){
@@ -52,11 +54,10 @@ class BarberAccordion extends Component{
     }
 
     renderForm(){
-        console.log("in renderForm - accordion - 2");
         const { handleSubmit } = this.props;
 
         return(
-            <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
+            <form onSubmit={ handleSubmit(this.onSubmit) }>
                 <div className="columns mb5">
                     <div className="column h80">
                         <Field
@@ -102,9 +103,8 @@ class BarberAccordion extends Component{
     }
 
     render(){
-        console.log("in render - accordion - 1 (in the accordion)");
-        const activeClass = this.state.accordionToggle ? "d-block" : "d-none";
-        const headerClass = this.state.accordionToggle ? "opened" : "closed";
+        const activeClass = this.state.accordionIsOpen ? "d-block" : "d-none";
+        const headerClass = this.state.accordionIsOpen ? "opened" : "closed";
 
         return(
             <div className="accordion">
@@ -146,8 +146,8 @@ export default reduxForm({
     validate: validate,
 })(
     connect(null, {
-        deleteBarber,
         fetchBarbers,
+        deleteBarber,
         updateBarber
     })(BarberAccordion)
 );

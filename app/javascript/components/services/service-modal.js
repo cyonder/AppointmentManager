@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
 import { Field, reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
-import { createService, fetchServices } from "../../actions/service";
+import {
+    createService,
+    fetchServices
+} from "../../actions/service";
 
 class ServiceCreateModal extends Component{
+    constructor(){
+        super();
+        this.onSubmit = this.onSubmit.bind(this);
+    };
 
     renderTextField(field){
         return(
@@ -27,7 +34,7 @@ class ServiceCreateModal extends Component{
     renderForm(){
         const { handleSubmit } = this.props;
         return(
-            <form onSubmit={ handleSubmit(this.onSubmit.bind(this)) }>
+            <form onSubmit={ handleSubmit(this.onSubmit) }>
                 <Field
                     label="Service Name"
                     name="service_name"
@@ -49,7 +56,7 @@ class ServiceCreateModal extends Component{
     }
 
     render(){
-        const activeClass = this.props.ui.modalToggle ? "active" : "";
+        const activeClass = this.props.ui.modalIsOpen ? "active" : "";
 
         return(
             <div className={`modal ${activeClass} modal-sm`}>

@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { toggleModal } from "../../actions/ui";
-import { bindActionCreators } from 'redux';
+import {
+    toggleModal,
+    toggleNavigation
+} from "../../actions/ui";
 
 import Navigation from '../navigation';
 import ServicesList from './services-list';
 import ServicesListHeader from './services-list-header';
-import ServiceCreateModal from './service-create-modal';
+import ServiceCreateModal from './service-modal';
 
 class Services extends Component{
     render(){
         return(
             <div id="page">
-                <Navigation />
+                <Navigation { ...this.props } />
                 <main>
                     <ServicesListHeader { ...this.props } />
                     <ServicesList />
@@ -29,8 +31,4 @@ function mapStateToProps(state){
     }
 }
 
-function mapDispatchToProps(dispatch){
-    return bindActionCreators({ toggleModal: toggleModal }, dispatch);
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(Services);
+export default connect(mapStateToProps, { toggleNavigation, toggleModal })(Services);
