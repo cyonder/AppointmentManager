@@ -3,16 +3,15 @@ import{
     FETCH_SERVICES,
     CREATE_SERVICE,
     DELETE_SERVICE,
-    UPDATE_SERVICE,
-    GET_BARBERS_FOR_SERVICES
+    UPDATE_SERVICE
 } from '../config/action-types';
 
 import { toggleModal } from "./ui";
 import { fetchBarbers } from './barber'
 
 // const ROOT_URL = 'http://barber.cloud/api/v1';
-// const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
-const ROOT_URL = 'http://localhost:3000/api/v1';
+const ROOT_URL = 'https://barbercloud.herokuapp.com/api/v1';
+// const ROOT_URL = 'http://localhost:3000/api/v1';
 const API_KEY = '?key=94drtfsm144';
 
 export const fetchServicesSuccess = (services) => {
@@ -42,13 +41,6 @@ export const updateServiceSuccess = (service) => {
         service: service
     }
 };
-
-// export const getBarbersForServicesSuccess = (barbers_for_services) => {
-//     return {
-//         type: GET_BARBERS_FOR_SERVICES,
-//         barbers_for_services: barbers_for_services
-//     }
-// };
 
 export const fetchServices = () => {
     return (dispatch) => {
@@ -103,14 +95,20 @@ export const updateService = (service, callback) => {
     }
 };
 
-// export const getBarbersForServices = (id) => {
-//     return (dispatch) => {
-//         return axios.get(`${ROOT_URL}/services/barbers/${id}${API_KEY}`)
-//             // .then( response => {
-//             //     dispatch( getBarbersForServicesSuccess(response.data) );
-//             // })
-//             .catch(error => {
-//                 throw(error);
-//             })
-//     };
-// }
+export const createBarberServices = (service_id, barber_id) => {
+    return (dispatch) => {
+        return axios.post(`${ROOT_URL}/barber_services/${barber_id}/${service_id}${API_KEY}`)
+        .catch(error => {
+            throw(error);
+        })
+    }
+}
+
+export const deleteBarberServices = (service_id, barber_id) => {
+    return (dispatch) => {
+        return axios.delete(`${ROOT_URL}/barber_services/${barber_id}/${service_id}${API_KEY}`)
+        .catch(error => {
+            throw(error);
+        })
+    }
+}

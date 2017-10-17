@@ -1,10 +1,8 @@
 class Api::V1::ServicesController < Api::V1::BaseController
-    def getBarbersForServices
-        render json: @Barber = Barber.find_by_sql(barbers_for_services_query)
-    end
+    # TODO: Get current_user.shop_id
 
     def index
-        respond_with Service.all
+        respond_with Service.where(:shop_id => "1")
     end
 
     def create
@@ -25,13 +23,5 @@ class Api::V1::ServicesController < Api::V1::BaseController
 
     def service_params
         params.require(:service).permit(:service_name, :price, :time)
-    end
-
-    def barbers_for_services_query
-        "SELECT barbers.id, barbers.first_name, barbers.last_name
-            FROM barbers
-            INNER JOIN barbers_services
-            ON barbers_services.barber_id = barbers.id
-            WHERE barbers_services.service_id = #{params[:id]}"
     end
 end

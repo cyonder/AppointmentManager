@@ -79,68 +79,71 @@ Shop.create!(shop_name: 'Seville',
 Shop.create!(shop_name: 'Lahori',
              owner_user_id: '4')
 
-user = User.first
-service = Service.first
-user.services << service
+BarberService.create!(barber_user_id: '1',
+                        service_id: '1')
 
-user = User.first
-service = Service.second
-user.services << service
+BarberService.create!(barber_user_id: '1',
+                        service_id: '3')
 
-user = User.second
-service = Service.second
-user.services << service
+BarberService.create!(barber_user_id: '2',
+                        service_id: '1')
 
-user = User.second
-service = Service.third
-user.services << service
+BarberService.create!(barber_user_id: '2',
+                        service_id: '4')
 
-user = User.third
-service = Service.first
-user.services << service
+BarberService.create!(barber_user_id: '3',
+                        service_id: '2')
 
-user = User.third
-service = Service.second
-user.services << service
+BarberService.create!(barber_user_id: '3',
+                        service_id: '5')
 
-user = User.third
-service = Service.third
-user.services << service
+BarberService.create!(barber_user_id: '4',
+                        service_id: '2')
 
-##########################
+BarberService.create!(barber_user_id: '4',
+                        service_id: '5')
+
 
 # user = User.first
-# role = Role.first
-# user.roles << role
+# service = Service.first
+# user.services << service
 #
 # user = User.first
-# role = Role.second
-# user.roles << role
+# service = Service.third
+# user.services << service
+
+# user = User.first
+# service = Service.seventh
+# user.services << service
+
+# user = User.second
+# service = Service.first
+# user.services << service
 #
 # user = User.second
-# role = Role.first
-# user.roles << role
-#
-# user = User.second
-# role = Role.second
-# user.roles << role
+# service = Service.fourth
+# user.services << service
+# ##
+# user = User.third
+# service = Service.second
+# user.services << service
 #
 # user = User.third
-# role = Role.first
-# user.roles << role
-#
-# user = User.third
-# role = Role.second
-# user.roles << role
+# service = Service.fifth
+# user.services << service
 #
 # user = User.fourth
-# role = Role.first
-# user.roles << role
+# service = Service.second
+# user.services << service
 #
 # user = User.fourth
-# role = Role.second
-# user.roles << role
+# service = Service.fifth
+# user.services << service
 #
-# user = User.fifth
-# role = Role.first
-# user.roles << role
+# user = User.fourth
+# service = Service.second
+# user.services << service
+
+# user = User.fourth
+# service = Service.sixth
+# user.services << service
