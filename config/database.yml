@@ -7,18 +7,23 @@ default: &default
   password: 94drtfsm144
 
 development:
-  <<: *default
-  database: barbercloud
+  # <<: *default
+      adapter: postgresql
+      encoding: utf8
+      database: d11c1mfuqjq45c
+      username: hwvggnnxlyvviq
+      password: 816f4876aef466fdaa865482bf38fa0134c0b71fc46164cdfe47c41dc4cbeca0
+      host: ec2-184-72-230-93.compute-1.amazonaws.com
 
-test:
-  <<: *default
-  database: app_test
-
-production:
+# test:
+#   <<: *default
+#   database: app_test
+#
+# production:
 #  <<: *default
-    adapter: postgresql
-    encoding: utf8
-    database: d11c1mfuqjq45c
-    username: hwvggnnxlyvviq
-    password: 816f4876aef466fdaa865482bf38fa0134c0b71fc46164cdfe47c41dc4cbeca0
-    host: ec2-184-72-230-93.compute-1.amazonaws.com
+#     adapter: postgresql
+#     encoding: utf8
+#     database: d11c1mfuqjq45c
+#     username: hwvggnnxlyvviq
+#     password: 816f4876aef466fdaa865482bf38fa0134c0b71fc46164cdfe47c41dc4cbeca0
+#     host: ec2-184-72-230-93.compute-1.amazonaws.com
